@@ -1,6 +1,6 @@
 package com.zkz.universalbrush.model.vo;
 
-import cn.hutool.json.JSONUtil;
+
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zkz.universalbrush.model.entity.Question;
 import com.zkz.universalbrush.model.entity.QuestionBank;
@@ -9,7 +9,6 @@ import org.springframework.beans.BeanUtils;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 /**
  * 题库视图
@@ -33,6 +32,11 @@ public class QuestionBankVO implements Serializable {
      */
     private String picture;
 
+    /**
+     * 题库名
+
+     */
+    private String title;
 
     /**
      * 创建时间
@@ -59,7 +63,7 @@ public class QuestionBankVO implements Serializable {
     /**
      * 题库里的题目列表（分页）
      */
-    Page<Question> questionPage;
+    Page<QuestionVO> questionPage;
 
     /**
      * 封装类转对象
